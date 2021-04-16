@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <p class="info">From Currency: </p>
+      <input type="text" autocomplete="off" class="fromCurrency" placeholder="3 Letters Code">
+      <p class="info">To Currency: </p>
+      <input type="text" autocomplete="off" class="toCurrency" placeholder="3 Letters Code">
+      <p class="info">Amount: </p>
+      <input type="number" autocomplete="off" class="howMuch" placeholder="how much">
+    </div>
+    <button class="btn convert">Convert</button>
+    <section class="main">
+
+      <div class="info">Current Exchange Rate: <span class="rate"></span></div>
+      <div class="info">Result: <span class="result"></span></div>
+      <ul class="info countries">
+
+      </ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
