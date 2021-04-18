@@ -8,10 +8,12 @@ const api_Fixer = {
 
 
 //global variables
+const hide = document.querySelector('.hide')
 const convert = document.querySelector('.convert')
 const fromCurrency = document.querySelector('.fromCurrency')
 const toCurrency = document.querySelector('.toCurrency')
-const result = document.querySelector('.result')
+const resultFrom = document.querySelector('.resultFrom')
+const resultTo = document.querySelector('.resultTo')
 const howMuch = document.querySelector('.howMuch')
 const rate = document.querySelector('.rate')
 const countries = document.querySelector('.countries')
@@ -20,6 +22,7 @@ convert.addEventListener('click', getCurrencyAPI);
 
 // 1. Fetch data about currencies
 function getCurrencyAPI() {
+  hide.style.display = 'unset';
   fetch(`${api_Fixer.base}latest?access_key=${api_Fixer.key}`)
     .then(fixerAPI => {
       return fixerAPI.json();
@@ -29,12 +32,17 @@ function getCurrencyAPI() {
 
 // 2. Convert & Display currencies
 function fromCurrencyTo(fAPI) {
+  fromCurrency.value = fromCurrency.value.toUpperCase();
+  toCurrency.value = toCurrency.value.toUpperCase();
+
 
   const euro = 1 / fAPI.rates[fromCurrency.value]
   const exchangeRate = euro * fAPI.rates[toCurrency.value]
   const convertedAmount = (howMuch.value * exchangeRate).toFixed(2);
   rate.innerText = exchangeRate.toFixed(2);
-  result.innerText = `For ${howMuch.value} ${fromCurrency.value} you will get ${convertedAmount} ${toCurrency.value}`;
+  resultFrom.innerText = `${howMuch.value} ${fromCurrency.value}`;
+  resultTo.innerText = `${convertedAmount} ${toCurrency.value}`;
+
 
 
   // Clear the list of countries.
@@ -76,16 +84,6 @@ function displayCountries(cAPI) {
 
   console.log(cAPI)
 
-  // const euro = 1 / fAPI.rates.GBP
-  // const exchangeRate = euro * fAPI.rates.PLN
-  // console.log(exchangeRate.toFixed(2))
-
-  // let fromCurrency = document.querySelector('.fromCurrency')
-  // fromCurrency.innerText = 'GBP'
-  // let toCurrency = document.querySelector('.toCurrency')
-  // toCurrency.innerText = 'PLN'
-  // let exRate = document.querySelector('.exRate')
-  // exRate.innerText = exchangeRate.toFixed(2);
 
 
 

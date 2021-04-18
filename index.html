@@ -10,27 +10,58 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="header">
-      <p class="info">From Currency: </p>
-      <input type="text" autocomplete="off" class="fromCurrency" placeholder="3 Letters Code">
-      <p class="info">To Currency: </p>
-      <input type="text" autocomplete="off" class="toCurrency" placeholder="3 Letters Code">
-      <p class="info">Amount: </p>
-      <input type="number" autocomplete="off" class="howMuch" placeholder="how much">
+  <div class="bg">
+    <div class="container">
+      <div class="tittle">
+        <h1>SpendAbroad</h1>
+        <p>SpendAbroat is an app you can use to check current exchange rates and see in what countries
+          you can use that currency</p>
+      </div>
+
+
+
+
+
+
+      <div class="header-flex">
+        <div class="item">
+          <p class="info">From</p>
+
+          <input type="text" autocomplete="off" class="fromCurrency" placeholder="currency code">
+
+        </div>
+
+        <div class="item">
+          <p class="info">Amount </p>
+          <input type="number" autocomplete="off" class="howMuch" placeholder="how much">
+        </div>
+
+        <div class="item">
+          <p class="info">To</p>
+          <input type="text" autocomplete="off" class="toCurrency" placeholder="currency code">
+        </div>
+
+
+      </div>
+
+
+
+      <section class="main">
+        <button class="btn convert">Convert</button>
+        <div class="hide">
+          <div class="output"><span class="info">Exchange Rate: </span><span class="rate"></span></div>
+          <div class="output">For <span class="result resultFrom"></span> you will get <span
+              class="result resultTo"></span>
+          </div>
+          <div class="output"><span class="info">You can spend it in following countries: </span></div>
+          <ul class=" countries">
+          </ul>
+        </div>
+      </section>
     </div>
-    <button class="btn convert">Convert</button>
-    <section class="main">
 
-      <div class="info">Current Exchange Rate: <span class="rate"></span></div>
-      <div class="info">Result: <span class="result"></span></div>
-      <ul class="info countries">
-
-      </ul>
-    </section>
+    <script src="script.js"></script>
   </div>
-
-  <script src="script.js"></script>
 </body>
 
 </html>
