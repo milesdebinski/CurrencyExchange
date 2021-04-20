@@ -16,8 +16,8 @@
     <div class="container">
       <div class="tittle">
         <h1>SpendAbroad</h1>
-        <p>SpendAbroat is an app you can use to check current exchange rates and see in what countries
-          you can use that currency</p>
+        <p>SpendAbroad is an app that can be used to check current exchange rates, as well as see which countries the
+          currency can be used in.</p>
       </div>
 
       <div class="header-flex">
@@ -29,8 +29,8 @@
         </div>
 
         <div class="item">
-          <p class="info">Amount </p>
-          <input min="0" step="1" type="number" autocomplete="off" class="options howMuch" placeholder="how much"
+          <p class="info">Amount</p>
+          <input min="0" step="1" type="number" autocomplete="off" class="options howMuch" placeholder="enter value"
             onkeypress="return event.charCode >= 46">
           <!--only num + . -->
         </div>
@@ -46,10 +46,12 @@
         <button class="btn convert">Convert</button>
         <div class="hide">
           <div class="output"><span class="info">Exchange Rate: </span><span class="result rate"></span></div>
-          <div class="output">For <span class="result resultFrom"></span> you will get <span
-              class="result resultTo"></span>
+          <div class="output"><span class="result resultFrom"></span> exchanges to <span
+              class="result resultTo"></span>.
           </div>
-          <div class="output"><span class="info">You can spend it in following countries: </span></div>
+          <div class="output"><span class="info"> <span class="resultTo2 result"></span> can be spent in the following
+              countries:
+            </span></div>
           <ul class=" countries">
           </ul>
         </div>

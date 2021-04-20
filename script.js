@@ -11,6 +11,7 @@ const fromCurrency = document.querySelector('.fromCurrency')
 const toCurrency = document.querySelector('.toCurrency')
 const countries = document.querySelector('.countries')
 const convert = document.querySelector('.convert')
+const howMuch = document.querySelector('.howMuch')
 convert.addEventListener('click', fromCurrencyTo);
 
 // 1. Get first list
@@ -25,6 +26,8 @@ function getList() {
         newOption.innerText = key;
         fromCurrency.appendChild(newOption);
         fromCurrency.value = 'GBP'
+        // howMuch.value = -
+
       }
     }).then(getSecondList);
 }
@@ -51,8 +54,9 @@ function fromCurrencyTo() {
 
   const resultFrom = document.querySelector('.resultFrom')
   const resultTo = document.querySelector('.resultTo')
+  const resultTo2 = document.querySelector('.resultTo2')
   const hide = document.querySelector('.hide')
-  const howMuch = document.querySelector('.howMuch')
+
   const rate = document.querySelector('.rate')
 
   hide.style.display = 'unset';
@@ -66,6 +70,8 @@ function fromCurrencyTo() {
   rate.innerText = exchangeRate.toFixed(2);
   resultFrom.innerText = `${howMuch.value} ${fromCurrency.value}`;
   resultTo.innerText = `${convertedAmount} ${toCurrency.value}`;
+  resultTo2.innerText = `${toCurrency.value}`
+
 
   // Clear the list of countries
   while (countries.lastElementChild) {
