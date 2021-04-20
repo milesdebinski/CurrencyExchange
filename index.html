@@ -30,7 +30,9 @@
 
         <div class="item">
           <p class="info">Amount </p>
-          <input type="number" autocomplete="off" class="options howMuch" placeholder="how much">
+          <input min="0" step="1" type="number" autocomplete="off" class="options howMuch" placeholder="how much"
+            onkeypress="return event.charCode >= 46">
+          <!--only num + . -->
         </div>
 
         <div class="item">

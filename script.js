@@ -3,7 +3,6 @@ const api_RestCountries = `https://restcountries.eu/rest/v2/currency/`;
 const api_Fixer = {
   key: "04fb41552e9d5d990f164335b5d231e5",
   base: "http://data.fixer.io/api/"
-
 }
 
 // Global variables
