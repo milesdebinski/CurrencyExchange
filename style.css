@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 :root {
   --primary-color: #1b6411;
   --secondary-color: #f8f8f8;
   --dark-color: #333;
   --light-color: #ffffff;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 html, body {
@@ -22,7 +23,6 @@ html, body {
   overflow-x: hidden;
 }
 
-
 ul {
   list-style:disc;
   column-count: 2;
@@ -30,6 +30,7 @@ ul {
   margin-bottom: 60px;
   /* column-gap: 20px; */
 }
+
 li {
   padding: 2px;
   font-size: 16px;
@@ -42,14 +43,11 @@ li {
   padding: 50px 100px;
 }
 
-
-
 .bg {
   background: url(./img/bg.jfif) no-repeat center center/cover;
   height: 100%;
   min-height: 100vh;
-  position: relative;
-  
+  position: relative; 
 }
 
 .bg::after {
@@ -67,12 +65,12 @@ li {
 }
 
 /* Tittle */
-
 .tittle {
   display: flex;
   flex-direction: column;
   padding-bottom: 40px ;
 }
+
 .tittle h1 {
   margin-bottom: 10px;
 }
@@ -169,9 +167,6 @@ li {
   left: 50%;
   transform: translate(-50%, -99%);
   /* height: 30vh; */
-  
-  
-  
 }
 
 .footer a {

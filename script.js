@@ -6,8 +6,7 @@ const api_Fixer = {
 
 }
 
-
-//Global variables
+// Global variables
 let fixerAPIdata;
 const fromCurrency = document.querySelector('.fromCurrency')
 const toCurrency = document.querySelector('.toCurrency')
@@ -15,7 +14,7 @@ const countries = document.querySelector('.countries')
 const convert = document.querySelector('.convert')
 convert.addEventListener('click', fromCurrencyTo);
 
-//1. Get first list
+// 1. Get first list
 function getList() {
   fetch(`${api_Fixer.base}latest?access_key=${api_Fixer.key}`)
     .then(fixerAPI => {
@@ -31,7 +30,7 @@ function getList() {
     }).then(getSecondList);
 }
 
-//2. Get second list
+// 2. Get second list
 function getSecondList() {
   fetch(`${api_Fixer.base}latest?access_key=${api_Fixer.key}`)
     .then(fixerAPI => {
@@ -69,7 +68,7 @@ function fromCurrencyTo() {
   resultFrom.innerText = `${howMuch.value} ${fromCurrency.value}`;
   resultTo.innerText = `${convertedAmount} ${toCurrency.value}`;
 
-  // Clear the list of countries.
+  // Clear the list of countries
   while (countries.lastElementChild) {
     countries.removeChild(countries.lastElementChild);
   }
