@@ -19,6 +19,7 @@ html, body {
   line-height: 1.2;
   font-size: 20px;
   color: var(--light-color);  
+  overflow: hidden;
 }
 
 
@@ -153,9 +154,42 @@ li {
 }
 
 
-.opcje {
+
+
+/* Footer */
+.footer {
+  font-size: 16px;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 96%;
+  left: 50%;
+  transform: translate(-50%);
+  /* height: 30vh; */
+  
+  
+  
 }
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: var(--primary-color);
+}
+
+.footer .social > * {
+  margin-right: 3px;
+}
+
+.footer p {
+  margin-right: 15px;
+}
+
 
 
 

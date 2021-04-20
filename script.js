@@ -9,13 +9,14 @@ const api_Fixer = {
 
 //Global variables
 let fixerAPIdata;
-const convert = document.querySelector('.convert')
+const fromCurrency = document.querySelector('.fromCurrency')
+const toCurrency = document.querySelector('.toCurrency')
 const countries = document.querySelector('.countries')
+const convert = document.querySelector('.convert')
 convert.addEventListener('click', fromCurrencyTo);
 
 //1. Get first list
 function getList() {
-  const optionsFrom = document.querySelector('.optionsFrom')
   fetch(`${api_Fixer.base}latest?access_key=${api_Fixer.key}`)
     .then(fixerAPI => {
       return fixerAPI.json();
@@ -24,15 +25,14 @@ function getList() {
       for (const [key] of Object.entries(fixerAPI.rates)) {
         let newOption = document.createElement('option');
         newOption.innerText = key;
-        optionsFrom.appendChild(newOption);
-        optionsFrom.value = 'GBP'
+        fromCurrency.appendChild(newOption);
+        fromCurrency.value = 'GBP'
       }
     }).then(getSecondList);
 }
 
 //2. Get second list
 function getSecondList() {
-  const optionsTo = document.querySelector('.optionsTo')
   fetch(`${api_Fixer.base}latest?access_key=${api_Fixer.key}`)
     .then(fixerAPI => {
       return fixerAPI.json();
@@ -40,8 +40,8 @@ function getSecondList() {
       for (const [key] of Object.entries(fixerAPI.rates)) {
         let newOption = document.createElement('option');
         newOption.innerText = key;
-        optionsTo.appendChild(newOption);
-        optionsTo.value = 'USD'
+        toCurrency.appendChild(newOption);
+        toCurrency.value = 'USD'
       }
     })
 }
@@ -50,8 +50,7 @@ getList();
 // 3. Convert & Display currencies
 function fromCurrencyTo() {
   // Variables
-  const fromCurrency = document.querySelector('.fromCurrency')
-  const toCurrency = document.querySelector('.toCurrency')
+
   const resultFrom = document.querySelector('.resultFrom')
   const resultTo = document.querySelector('.resultTo')
   const hide = document.querySelector('.hide')
