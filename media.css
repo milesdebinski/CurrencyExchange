@@ -1,0 +1,57 @@
+/* Mobile */
+@media(max-width: 720px){
+  .container {
+  text-align: center;
+  margin: auto;
+  padding: 10px 30px;
+  }
+  .tittle {
+    padding-bottom: 15px ;
+  }
+  .tittle h1 {
+    padding-bottom: 30px;  
+  }
+  .tittle p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .header-flex .item .options {
+    margin: 0 3px;
+  }
+ 
+  .btn {
+    font-size: 18px;
+    margin-bottom: 0px;
+    margin-top: 16px;
+    padding: 8px 12px;
+  }
+  li {
+    padding: 1px;
+   
+   }
+   .footer {
+     width: 100%;
+   }
+   .main .output {
+     margin-bottom: 5px;
+     text-align: center;
+   }
+}
+
+/* Galaxy Fold */
+@media(max-width: 290px) {
+  .container {
+    text-align: center;
+    margin: auto;
+    padding: 10px 10px;
+    }
+  .header-flex .item .options {
+    max-width: 110px;
+  }
+  .footer {
+    font-size: 14px;
+  }
+}
+
+
+
